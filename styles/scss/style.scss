@@ -1,0 +1,22 @@
+// IMPORT CORE FILES
+@import './cores/reset';
+@import './cores/variables';
+
+// FONTAWESOME
+// @use "cores/fontawesome/fontawesome.scss";
+// @use "cores/fontawesome/solid.scss";
+// @use "cores/fontawesome/brands.scss";
+
+@import './cores/mixins';
+@import './cores/components';
+@import './cores/elements';
+@import './cores/layouts';
+@import './cores/bootstrap-mini';
+
+/* Navigation, header, footer*/
+@import './cores/header';
+@import './cores/footer';
+@import './cores/nav';
+
+// IMPORT PAGES
+@import './pages/home';

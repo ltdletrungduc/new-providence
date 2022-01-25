@@ -1,0 +1,183 @@
+// CUSTOM MIXINS
+
+// MEDIA QUERIESE - MOBILE 1st
+@mixin for-mobile {
+  @media screen and (min-width: $xs-min) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media screen and (min-width: $md-min) and (min-height: $sm-min) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media screen and (min-width: $xl-min) {
+    @content;
+  }
+}
+
+@mixin for-desktop-large {
+  @media screen and (min-width: $xxl-min) {
+    @content;
+  }
+}
+
+@mixin minW($args) {
+  @media (min-width: $args) {
+    @content;
+  }
+}
+
+@mixin maxW($args) {
+  @media (max-width: $args) {
+    @content;
+  }
+}
+
+@mixin minH($args) {
+  @media (min-height: $args) {
+    @content;
+  }
+}
+
+@mixin maxH($args) {
+  @media (max-height: $args) {
+    @content;
+  }
+}
+
+@mixin border-r($radius) {
+  border-radius: $radius;
+  background-clip: padding-box; /* stops bg color from leaking outside the border: */
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation(
+  $delay,
+  $duration,
+  $animation,
+  $direction: normal,
+  $fillmode: forwards
+) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: $fillmode;
+  animation-direction: $direction;
+
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: $fillmode;
+  -webkit-animation-direction: $direction;
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: $fillmode;
+  -moz-animation-direction: $direction;
+}
+
+@mixin transform($args) {
+  transform: $args;
+  -webkit-transform: $args;
+  -o-transform: $args;
+}
+
+@mixin transform-origin($args) {
+  transform-origin: $args;
+  -webkit-transform-origin: $args;
+  -o-transform-origin: $args;
+}
+@mixin transition-delay($args) {
+  transition-delay: $args;
+  -webkit-transition-delay: $args;
+  -o-transition-delay: $args;
+}
+
+@mixin transition($args) {
+  transition: $args;
+  -webkit-transition: $args;
+  -o-transition: $args;
+}
+
+@mixin fontFormat(
+  $font-size: $fz-text,
+  $font-family: auto,
+  $line-height: $line-height,
+  $color: $text-color,
+  $text-transform: initial,
+  $letter-spacing: normal,
+  $font-weight: normal
+) {
+  font-size: $font-size;
+  font-family: $font-family;
+  line-height: $line-height;
+  color: $color;
+  text-transform: $text_transform;
+  letter-spacing: $letter_spacing;
+  font-weight: $font_weight;
+}
+
+@mixin absolute-mid() {
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+  position: absolute;
+}
+
+@mixin flex-center-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hidden() {
+  opacity: 0;
+  visibility: hidden;
+}
+@mixin visible() {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin overtext($args) {
+  text-overflow: ellipsis;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: $args;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #2b2b2b;
+    border-radius: 50px;
+  }
+}

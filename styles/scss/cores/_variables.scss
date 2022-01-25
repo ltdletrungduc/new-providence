@@ -1,0 +1,38 @@
+// COLORS
+$color-black: #000000;
+$color-white: #ffffff;
+
+// FONTS
+$main-font: Arial;
+$text-color: #000000;
+$upper-c: uppercase;
+$lower-c: lowercase;
+$capitalize: capitalize;
+
+// HEADING TYPO
+$fz-text: 16px;
+$line-height: normal;
+$fz-text-mobile: 14px;
+$line-height-mobile: normal;
+
+// TRANSITION VARIABLES
+$time: 0.4s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+// MEDIA QUERY BREAKPOINTS*/
+$xs-min: 320px;
+$sm-min: 576px;
+$md-min: 768px;
+$lg-min: 992px;
+$xl-min: 1200px;
+$xxl-min: 1400px;
+
+// BOXED LAYOUT
+$max-width: 1920px;
+$container-width: 1170px;
+$container-gap: 30px;
+
+// Z-INDEX
+$z-header: 300;
+$z-nav: $z-header + 1;
+$default-z: 100;
