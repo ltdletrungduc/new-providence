@@ -1,7 +1,7 @@
 // Gruntfile.js
 module.exports = grunt => {
   // Load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt)
 
   grunt.initConfig({
     package: grunt.file.readJSON('package.json'),
@@ -54,7 +54,7 @@ module.exports = grunt => {
         spawn: false
       },
       sass: {
-        files: '<%= dirs.sass %>/**/**/*.scss',
+        files: '<%= dirs.scss %>/**/**/*.scss',
         tasks: ['sass']
       }
       // cssmin: {
@@ -84,12 +84,12 @@ module.exports = grunt => {
         }
       }
     }
-  });
+  })
 
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.registerTask('default', ['browserSync', 'watch']);
-};
+  grunt.loadNpmTasks('grunt-contrib-uglify')
+  grunt.loadNpmTasks('grunt-contrib-cssmin')
+  grunt.loadNpmTasks('grunt-contrib-sass')
+  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-browser-sync')
+  grunt.registerTask('default', ['browserSync', 'watch'])
+}
